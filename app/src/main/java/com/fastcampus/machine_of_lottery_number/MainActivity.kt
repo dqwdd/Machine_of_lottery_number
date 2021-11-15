@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.NumberPicker
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 
 class MainActivity : AppCompatActivity() {
@@ -68,11 +69,27 @@ class MainActivity : AppCompatActivity() {
 
                 textView.text = number.toString()
                 textView.isVisible = true
+
+                setNumberBackground(number, textView)
+
             }
 
             Log.d("MainActivity", list.toString())
         }
     }
+
+
+    //숫자 배경 oval 색 함수
+    private fun setNumberBackground(number: Int, textView: TextView) {
+        when(number) {
+            in 1..10 -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_yellow)
+            in 11..20 -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_blue)
+            in 21..30 -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_red)
+            in 31..40 -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_gray)
+            in 41..45 -> textView.background = ContextCompat.getDrawable(this, R.drawable.circle_green)
+        }
+    }
+
 
     //추가 버튼 클릭 시의 기능들 함수
     private fun initAddButton() {
@@ -96,6 +113,8 @@ class MainActivity : AppCompatActivity() {
             val textView = numberTextViewList[pickNumberSet.size]
             textView.isVisible = true
             textView.text = numberPicker.value.toString()
+
+            setNumberBackground(numberPicker.value, textView)
 
             pickNumberSet.add(numberPicker.value)
 

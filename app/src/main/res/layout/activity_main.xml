@@ -54,6 +54,9 @@
             android:visibility="gone"
             tools:visibility="visible"
             android:layout_margin="5dp"
+            android:background="@drawable/circle_green"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
@@ -64,6 +67,9 @@
             android:text="1"
             android:visibility="gone"
             tools:visibility="visible"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_red"
             android:layout_margin="5dp"
             android:textSize="18sp"
             android:textStyle="bold"/>
@@ -74,7 +80,10 @@
             android:layout_height="wrap_content"
             android:text="1"
             android:visibility="gone"
+            android:gravity="center"
+            android:textColor="@color/white"
             tools:visibility="visible"
+            android:background="@drawable/circle_red"
             android:layout_margin="5dp"
             android:textSize="18sp"
             android:textStyle="bold"/>
@@ -85,6 +94,9 @@
             android:layout_height="wrap_content"
             android:text="1"
             android:visibility="gone"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_yellow"
             tools:visibility="visible"
             android:layout_margin="5dp"
             android:textSize="18sp"
@@ -97,6 +109,9 @@
             android:text="1"
             android:visibility="gone"
             tools:visibility="visible"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_gray"
             android:layout_margin="5dp"
             android:textSize="18sp"
             android:textStyle="bold"/>
@@ -107,7 +122,10 @@
             android:layout_height="wrap_content"
             android:text="1"
             android:visibility="gone"
+            android:background="@drawable/circle_blue"
             tools:visibility="visible"
+            android:gravity="center"
+            android:textColor="@color/white"
             android:layout_margin="5dp"
             android:textSize="18sp"
             android:textStyle="bold"/>
